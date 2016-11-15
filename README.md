@@ -5,8 +5,8 @@ Allows dynamic hiding of characters within a given element via some sort of user
 ## dynhide.js
 Functions:
 
-DHprimer(*id*, *decoder*)
-dynHide(*decoder*, *timeout*)
+* DHprimer(*id*, *decoder*)
+* dynHide(*decoder*, *timeout*)
 
 Load **DHprimer()** onLoad. It will prime the body of text with *id* to respond to decoder element with id of *decoder*
 
@@ -17,8 +17,8 @@ Currently the default settings of the function will change opacity to 0.3.
 ## cipherGen.js
 Functions:
 
-showCipherOption(*text*)
-cipherGen(*text*,*cipher*,*length*,*min*,*max*)
+* showCipherOption(*text*)
+* cipherGen(*text*,*cipher*,*length*,*min*,*max*)
 
 **showCipherOption()** returns the *possible characters* for use in **cipherGen()** based on given *text*
 

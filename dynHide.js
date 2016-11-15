@@ -33,9 +33,9 @@ function DHprimer(id, decoder){
 
 
 //Dynamic Hiding of characters.
-function dynHide(decoder){
+function dynHide(decoder,opacity,timeout){
   //Shows previously hidden characters
-
+setTimeout(function() {
     //splits hidden div innerHTML into an array of single characters
 var hiddenPrev = document.getElementById('dynHide-hidden-div').innerHTML.split('');
 
@@ -63,7 +63,8 @@ var hiddenCur = document.getElementById('dynHide-hidden-div').innerHTML.split(''
 
   //for each element in className found, change the style
     for (x in search){
-      search[x].style = "opacity: 0.3";
+      search[x].style = "opacity: " + opacity;
     }
   }
+}, timeout);
 }

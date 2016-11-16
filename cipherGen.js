@@ -1,14 +1,16 @@
 //Character set
 //Function to show you what characters can be used given a -text-
-function showCipherOption(text){
+function showCipherOption(text, div){
   var encText = text.split('');
   var charset = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
 
 //Compares each character in encText[q] and removes it from charset
-for (q in encText){
+  for (q in encText){
   var index = charset.indexOf(encText[q]);
   charset.splice(index, 1);
   }
+
+  document.getElementById(div).innerHTML = charset;
 }
 
 
@@ -117,3 +119,6 @@ function cipherGen(text,cipher,length,min,max){
         z ++;
       }
     }
+
+    return finalText;
+  }

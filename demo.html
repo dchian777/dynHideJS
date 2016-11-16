@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function run(){
+  var text = document.getElementById('showCipher').value;
+  var div = "main-body";
+  showCipherOption(text, div);
+}
+
+function run2(){
+  var text = document.getElementById('enc').value;
+  var cipher = document.getElementById('showCipher').value;
+  var length = 100;
+  var min = 3;
+  var max = 12;
+  document.getElementById('main-body').innerHTML = cipherGen(text,cipher,length,min,max);
+  DHprimer('main-body', 'decoder');
+}
+</script>
+<script src="dynHide.js"></script>
+<script src="cipherGen.js"></script>
+<body align="center">
+  <h1> Puzzle Decoder </h1>
+  <span align="center">Cipher: <input id='showCipher' type="text"><button onClick="run()">Click me</button></span><br>
+  <span align="center">Text to encode: <input id="enc" type="text"><button onClick="run2()">Submit</button></span><br>
+  <span align="center">Decoder: <input id="decoder" type="text" onkeyup="dynHide('decoder',0.1,1250)"></span>
+  <div id="main-body" align="justify" style="width: 75%; padding: 12.5%;">
+</div>
+
+<!--
+<div id="ready"></div>
+<div id="hidden" style="display: none"></div>
+-->
+</body>
+</html>

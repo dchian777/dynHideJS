@@ -1,6 +1,17 @@
 # dynHideJS
 Allows dynamic hiding of characters within a given element via some sort of user input.
+Most functions best run within an external function.
 
+eg:
+*function* run(){
+*//set parameters*
+var text = ...
+...
+...
+...
+
+cipherGen(*text, cipher, length, min, max*);
+}
 
 ## dynHide.js
 Functions:
@@ -17,11 +28,11 @@ Currently the default settings of the function will change opacity to 0.3.
 ## cipherGen.js
 Functions:
 
-* showCipherOption(*text*)
+* showCipherOption(*text*,*div*)
 * cipherGen(*text*,*cipher*,*length*,*min*,*max*)
 
-**showCipherOption()** returns the *possible characters* for use in **cipherGen()** based on given *text*
+**showCipherOption()** outputs the *possible characters* for use in **cipherGen()** based on given *text* into *div*.
 
-**cipherGen()** creates a bulk of randomly generated text.
+**cipherGen()** returns a bulk of randomly generated text.
 It encodes a value of *text* within *length* amount of words of minimum/maximum length of *min/max* characters.
 To be deciphered via **dynHide()**

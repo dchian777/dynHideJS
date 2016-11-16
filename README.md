@@ -3,14 +3,21 @@ Allows dynamic hiding of characters within a given element via some sort of user
 Most functions best run within an external function.
 
 eg:
+
 *function* run(){
+
 *//set parameters*
+
 var text = ...
+
 ...
+
 ...
+
 ...
 
 cipherGen(*text, cipher, length, min, max*);
+
 }
 
 ## dynHide.js

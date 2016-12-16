@@ -24,13 +24,12 @@ cipherGen(*text, cipher, length, min, max*);
 Functions:
 
 * DHprimer(*id*, *decoder*)
-* dynHide(*decoder*, *timeout*)
+* dynHide(*decoder*, *opacity*, *timeout*)
 
 Load **DHprimer()** onLoad. It will prime the body of text with *id* to respond to decoder element with id of *decoder*
 
-**dynHide()** should be an user input field with id of *decoder*, delay of value (in ms) *timeout*. Best initialized *onKeyUp*.
+**dynHide()** should be an user input field with id of *decoder*, delay of value (in ms) *timeout* with opacity of *opacity*. IF opacity is set to value of FALSE, it will hide the text instead of de-opacify. Best initialized *onKeyUp*.
 
-Currently the default settings of the function will change opacity to 0.3.
 
 ## cipherGen.js
 Functions:

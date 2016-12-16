@@ -34,6 +34,23 @@ function DHprimer(id, decoder){
 
 //Dynamic Hiding of characters.
 function dynHide(decoder,opacity,timeout){
+
+  //Variables
+  if (Number.isInteger(parseInt(opacity)) == true){
+    //Original style
+    var orgStyle = "opacity: 1";
+
+    //Changed style
+    var finalStyle = "opacity: " + opacity;
+  }
+  else {
+    //Original Style
+    var orgStyle = "display: inline";
+
+    //Changed style
+    var finalStyle = "display: none";
+  }
+
   //Shows previously hidden characters
 setTimeout(function() {
     //splits hidden div innerHTML into an array of single characters
@@ -45,7 +62,7 @@ for (i in hiddenPrev){
 
     //for each element with classname found, reset the style
   for (x in search){
-    search[x].style = "opacity: 1";
+    search[x].style = orgStyle;
   }
 }
 
@@ -63,7 +80,7 @@ var hiddenCur = document.getElementById('dynHide-hidden-div').innerHTML.split(''
 
   //for each element in className found, change the style
     for (x in search){
-      search[x].style = "opacity: " + opacity;
+      search[x].style = finalStyle;
     }
   }
 }, timeout);
